@@ -14,7 +14,7 @@ Atualmente, estudo e pratico:
 
 | JavaScript | HTML | CSS | APIs e Banco de Dados |
 |:---:|:---:|:---:|:---:|
-|<img src="JavaScript-Symbol.png" alt="JavaScript" width="88"> |<img src="htmlsymbol.png" alt="HTML" width="88"> |<img src="css-symbol.webp" alt="CSS" width="88"> |<img src="bancodedados-symbol.webp" alt="APIs e Banco de Dados" width="88"> |
+|<img src="JavaScript-Symbol.png" alt="JavaScript" width="88"> |<img src="html-sem-fundo.png" alt="HTML" width="88"> |<img src="css-symbol.webp" alt="CSS" width="88"> |<img src="bancodedados-symbol.webp" alt="APIs e Banco de Dados" width="88"> |
 | Em aprendizado | Em aprendizado | Em aprendizado | Estudando e aprendendo |
 
 ## Objetivos
