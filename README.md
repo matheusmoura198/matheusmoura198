@@ -2,6 +2,8 @@
 
 🎓 **Estudante de Técnico em Informática**
 
+🌐 **[Acesse meu portfólio pessoal](https://matheusmoura198.github.io/matheusmoura198/)** — conheça um pouco sobre mim, meus interesses e alguns projetos.
+
 ## Sobre mim
 
 Sou estudante de Técnico em Informática na **Escola Estadual de Ensino Profissional Deputado Roberto Mesquita** e resido no município de **General Sampaio – CE, Brasil**.
