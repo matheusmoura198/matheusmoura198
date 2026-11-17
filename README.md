@@ -1,6 +1,6 @@
 # Olá! Eu sou Matheus Moura 👋
 
-🎓 **Estudante de Técnico em Informática** | 💻 **Desenvolvimento de Software**
+🎓 **Estudante de Técnico em Informática**
 
 ## Sobre mim
 
