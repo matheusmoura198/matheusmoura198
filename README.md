@@ -31,3 +31,9 @@ Quero seguir aprendendo, desenvolver projetos cada vez melhores e transformar co
 📚 Técnico em Informática  
 🎮 Interessado em Pokémon, games e desenvolvimento  
 🚀 Em constante aprendizado
+
+
+## Contato
+
+[![INSTAGRAM](https://img.shields.io/badge/INSTAGRAM-E32636?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/oth3uxz_/)
+[![WHATSAPP](https://img.shields.io/badge/WHATSAPP-168B48?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5585991613182)
