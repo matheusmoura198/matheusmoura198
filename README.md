@@ -1,8 +1,8 @@
 # Olá! Eu sou Matheus Moura 👋
 
-🎓 **Estudante de Técnico em Informática**
+🚀 **[ACESSE MEU PORTFÓLIO](https://matheusmoura198.github.io/matheusmoura198/)** — projetos, apresentação e objetivos profissionais.
 
-🌐 **[Acesse meu portfólio pessoal](https://matheusmoura198.github.io/matheusmoura198/)** — conheça um pouco sobre mim, meus interesses e alguns projetos.
+🎓 **Estudante de Técnico em Informática**
 
 ## Sobre mim
 
@@ -29,4 +29,5 @@ Quero seguir aprendendo, desenvolver projetos cada vez melhores e transformar co
 
 📍 General Sampaio – Ceará, Brasil  
 📚 Técnico em Informática  
+🎮 Interessado em Pokémon, games e desenvolvimento  
 🚀 Em constante aprendizado
