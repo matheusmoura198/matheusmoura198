@@ -147,6 +147,11 @@
         border-radius:16px;
         background:#202020
       }
+      /* Garante que o atributo hidden prevaleça sobre display:grid/flex. */
+      .photo-placeholder[hidden],
+      .photo-frame img[hidden] {
+        display:none !important;
+      }
       .photo-placeholder {
         height:100%;
         display:grid;
