@@ -1,86 +1,210 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfólio de Matheus Moura, estudante de Técnico em Informática e desenvolvedor em formação.">
-  <title>Matheus Moura | Portfólio</title>
-  <style>
-    :root{--bg:#090909;--surface:#141414;--surface2:#1c1c1c;--red:#e32636;--red2:#ff4655;--text:#f5f5f5;--muted:#aaa;--line:#302126}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:10;background:#090909eF;border-bottom:1px solid #292020;backdrop-filter:blur(12px)}
-    nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:850;letter-spacing:.4px}.brand span{color:var(--red2)}
-    .navlinks{display:flex;gap:22px;flex-wrap:wrap;font-size:.92rem;color:#ddd}.navlinks a:hover{color:var(--red2)}
-    .hero{padding:76px 0 66px;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:48px;min-height:520px}
-    .eyebrow{color:var(--red2);font-size:.82rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-    h1{font-size:clamp(2.7rem,7vw,5.2rem);line-height:1.04;letter-spacing:-3px;margin:14px 0 20px}h1 span{color:var(--red2)}
-    .intro{font-size:1.08rem;color:#c8c8c8;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:8px;font-weight:750;border:1px solid var(--red);background:var(--red);color:white;transition:.2s}
-    .btn:hover{transform:translateY(-2px);background:var(--red2)}.btn.ghost{background:transparent;border-color:#594047}.btn.ghost:hover{border-color:var(--red2)}
-    .photo-area{display:flex;justify-content:center}.photo-frame{width:min(290px,75vw);aspect-ratio:1;border:2px solid var(--red);border-radius:24px;padding:9px;background:linear-gradient(145deg,#301016,#111);box-shadow:18px 18px 0 #40121a}
-    .photo-frame img{width:100%;height:100%;object-fit:cover;border-radius:16px;background:#202020}.photo-placeholder{height:100%;display:grid;place-items:center;text-align:center;border:1px dashed #75404a;border-radius:16px;color:#bbb;padding:20px}
-    .photo-placeholder strong{display:block;color:white;font-size:3.5rem}.photo-placeholder small{display:block}
-    section{padding:68px 0;border-top:1px solid #211a1c}.section-kicker{color:var(--red2);font-weight:800;letter-spacing:1.8px;text-transform:uppercase;font-size:.76rem}
-    h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:8px 0 24px;letter-spacing:-1px}.about{max-width:800px;color:#c5c5c5}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--surface);border:1px solid #302326;border-radius:14px;padding:23px;transition:.2s}.card:hover{border-color:#9b303e;transform:translateY(-3px)}
-    .card-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.tag{font-size:.72rem;color:#ff9ba4;background:#35151b;padding:4px 9px;border-radius:30px}.card h3{margin:13px 0 7px;font-size:1.2rem}.card p{margin:0;color:#bdbdbd}.card a{display:inline-block;color:#ff6673;font-weight:750;margin-top:17px}
-    .interests{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.interest{background:var(--surface);border:1px solid #302326;border-radius:12px;padding:20px}.interest .symbol{font-size:1.8rem}.interest h3{margin:8px 0 3px}.interest p{margin:0;color:var(--muted);font-size:.92rem}
-    .goal{background:linear-gradient(120deg,#2a0e13,#141414 70%);border:1px solid #64232e;border-radius:16px;padding:28px}.goal p{color:#d0c4c6;max-width:800px;margin-bottom:0}
-    footer{padding:30px 0;color:#888;font-size:.88rem;text-align:center;border-top:1px solid #211a1c}footer a{color:#ff6673}\n    .contact{padding:58px 0;border-top:1px solid #211a1c;text-align:center}.contact p{color:var(--muted);margin-top:-12px}.contact-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:24px}.contact-btn{display:inline-flex;align-items:center;justify-content:center;min-width:190px;padding:13px 22px;border-radius:9px;color:#fff;font-weight:850;letter-spacing:.5px;transition:.2s}.contact-btn:hover{transform:translateY(-3px);filter:brightness(1.12)}.contact-instagram{background:#e32636}.contact-whatsapp{background:#168b48}
-    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:55px 0;gap:35px}.photo-area{grid-row:1}.photo-frame{width:210px}.grid{grid-template-columns:1fr}.interests{grid-template-columns:1fr}.navlinks{gap:12px;font-size:.82rem}nav{align-items:flex-start;padding:15px 0;flex-direction:column}h1{letter-spacing:-1.5px}}
-  </style>
-</head>
-<body>
-<header><div class="wrap"><nav aria-label="Navegação principal">
-  <a class="brand" href="#inicio">MATHEUS<span>.</span></a>
-  <div class="navlinks"><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#interesses">Interesses</a><a href="#objetivos">Objetivos</a><a href="#contato">Contato</a><a href="https://github.com/matheusmoura198" target="_blank" rel="noopener">GitHub ↗</a></div>
-</nav></div></header>
-<main>
-  <div class="wrap hero" id="inicio">
-    <div>
-      <div class="eyebrow">Estudante de informática · Desenvolvedor em formação</div>
-      <h1>Olá, eu sou<br><span>Matheus Moura.</span></h1>
-      <p class="intro">Sou estudante do curso Técnico em Informática na Escola Estadual de Ensino Profissional Deputado Roberto Mesquita e moro em General Sampaio, Ceará. Gosto de tecnologia, games e de aprender como ideias podem virar projetos digitais.</p>
-      <div class="actions"><a class="btn" href="#projetos">Conheça meus projetos</a><a class="btn ghost" href="https://github.com/matheusmoura198" target="_blank" rel="noopener">Meu GitHub</a></div>
-    </div>
-    <div class="photo-area">
-      <div class="photo-frame">
-        <div class="photo-placeholder" id="photoPlaceholder"><div><strong>MM</strong><small>Adicione sua foto em<br><code>assets/foto-perfil.png</code></small></div></div>
-        <img id="profilePhoto" src="IMG_20261115_003356.png" alt="Foto de Matheus Moura" hidden onload="this.hidden=false;document.getElementById('photoPlaceholder').hidden=true" onerror="this.hidden=true">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfólio de Matheus Moura, estudante de Técnico em Informática e desenvolvedor em formação.">
+    <title>Matheus Moura | Portfólio</title><style> :root { --bg:#090909; --surface:#141414; --surface2:#1c1c1c; --red:#e32636; --red2:#ff4655; --text:#f5f5f5; --muted:#aaa; --line:#302126 } * { box-sizing:border-box } html { scroll-behavior:smooth } body { margin:0; background:var(--bg); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.65 } a { color:inherit; text-decoration:none } .wrap { width:min(1100px,92%); margin:auto } header { position:sticky; top:0; z-index:10; background:#090909eF; border-bottom:1px solid #292020; backdrop-filter:blur(12px) } nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px } .brand { font-weight:850; letter-spacing:.4px } .brand span { color:var(--red2) } .navlinks { display:flex; gap:22px; flex-wrap:wrap; font-size:.92rem; color:#ddd } .navlinks a:hover { color:var(--red2) } .hero { padding:76px 0 66px; display:grid; grid-template-columns:1.3fr .7fr; align-items:center; gap:48px; min-height:520px } .eyebrow { color:var(--red2); font-size:.82rem; font-weight:800; letter-spacing:2px; text-transform:uppercase } h1 { font-size:clamp(2.7rem,7vw,5.2rem); line-height:1.04; letter-spacing:-3px; margin:14px 0 20px } h1 span { color:var(--red2) } .intro { font-size:1.08rem; color:#c8c8c8; max-width:650px } .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px } .btn { display:inline-flex; align-items:center; justify-content:center; padding:11px 18px; border-radius:8px; font-weight:750; border:1px solid var(--red); background:var(--red); color:white; transition:.2s } .btn:hover { transform:translateY(-2px); background:var(--red2) } .btn.ghost { background:transparent; border-color:#594047 } .btn.ghost:hover { border-color:var(--red2) } .photo-area { display:flex; justify-content:center } .photo-frame { width:min(290px,75vw); aspect-ratio:1; border:2px solid var(--red); border-radius:24px; padding:9px; background:linear-gradient(145deg,#301016,#111); box-shadow:18px 18px 0 #40121a } .photo-frame img { width:100%; height:100%; object-fit:cover; border-radius:16px; background:#202020 } .photo-placeholder { height:100%; display:grid; place-items:center; text-align:center; border:1px dashed #75404a; border-radius:16px; color:#bbb; padding:20px } .photo-placeholder strong { display:block; color:white; font-size:3.5rem } .photo-placeholder small { display:block } section { padding:68px 0; border-top:1px solid #211a1c } .section-kicker { color:var(--red2); font-weight:800; letter-spacing:1.8px; text-transform:uppercase; font-size:.76rem } h2 { font-size:clamp(1.8rem,4vw,2.6rem); margin:8px 0 24px; letter-spacing:-1px } .about { max-width:800px; color:#c5c5c5 } .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px } .card { background:var(--surface); border:1px solid #302326; border-radius:14px; padding:23px; transition:.2s } .card:hover { border-color:#9b303e; transform:translateY(-3px) } .card-top { display:flex; justify-content:space-between; align-items:center; gap:12px } .tag { font-size:.72rem; color:#ff9ba4; background:#35151b; padding:4px 9px; border-radius:30px } .card h3 { margin:13px 0 7px; font-size:1.2rem } .card p { margin:0; color:#bdbdbd } .card a { display:inline-block; color:#ff6673; font-weight:750; margin-top:17px } .interests { display:grid; grid-template-columns:repeat(3,1fr); gap:15px } .interest { background:var(--surface); border:1px solid #302326; border-radius:12px; padding:20px } .interest .symbol { font-size:1.8rem } .interest h3 { margin:8px 0 3px } .interest p { margin:0; color:var(--muted); font-size:.92rem } .goal { background:linear-gradient(120deg,#2a0e13,#141414 70%); border:1px solid #64232e; border-radius:16px; padding:28px } .goal p { color:#d0c4c6; max-width:800px; margin-bottom:0 } footer { padding:30px 0; color:#888; font-size:.88rem; text-align:center; border-top:1px solid #211a1c } footer a { color:#ff6673 } .contact { padding:58px 0; border-top:1px solid #211a1c; text-align:center } .contact p { color:var(--muted); margin-top:-12px } .contact-actions { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:24px } .contact-btn { display:inline-flex; align-items:center; justify-content:center; min-width:190px; padding:13px 22px; border-radius:9px; color:#fff; font-weight:850; letter-spacing:.5px; transition:.2s } .contact-btn:hover { transform:translateY(-3px); filter:brightness(1.12) } .contact-instagram { background:#e32636 } .contact-whatsapp { background:#168b48 } @media(max-width:760px) { .hero { grid-template-columns:1fr; padding:55px 0; gap:35px } .photo-area { grid-row:1 } .photo-frame { width:210px } .grid { grid-template-columns:1fr } .interests { grid-template-columns:1fr } .navlinks { gap:12px; font-size:.82rem } nav { align-items:flex-start; padding:15px 0; flex-direction:column } h1 { letter-spacing:-1.5px } } </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <nav aria-label="Navegação principal">
+          <a class="brand" href="#inicio">MATHEUS<span>.</span></a>
+          <div class="navlinks">
+            <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#interesses">Interesses</a><a href="#objetivos">Objetivos</a><a href="#contato">Contato</a><a href="https://github.com/matheusmoura198" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </nav>
       </div>
-    </div>
-  </div>
-
-  <section id="sobre"><div class="wrap">
-    <div class="section-kicker">Um pouco sobre mim</div><h2>Aprendendo, criando e evoluindo.</h2>
-    <p class="about">Atualmente estou desenvolvendo meus conhecimentos em HTML, CSS e JavaScript, enquanto estudo e aprendo sobre APIs e bancos de dados. Tenho interesse em desenvolvimento web e quero ampliar minhas habilidades criando experiências, ferramentas e soluções próprias. Cada projeto é uma oportunidade de praticar e dar mais um passo na minha formação.</p>
-  </div></section>
-
-  <section id="projetos"><div class="wrap">
-    <div class="section-kicker">Meu trabalho</div><h2>Projetos e experiências</h2>
-    <div class="grid">
-      <article class="card"><div class="card-top"><span class="tag">Desenvolvimento web</span><span>01</span></div><h3>PlatinumGames</h3><p>Site sobre jogos, com páginas de informações e guias de conquistas. Projeto desenvolvido com HTML, CSS e JavaScript, incluindo pesquisa e layout responsivo.</p><a href="https://github.com/matheusmoura198/platinumGames" target="_blank" rel="noopener">Ver repositório ↗</a></article>
-      <article class="card"><div class="card-top"><span class="tag">Projeto em desenvolvimento</span><span>02</span></div><h3>Game Market Intelligence</h3><p>Projeto independente de inteligência de mercado para jogos, planejado para reunir catálogo, comparação e histórico de preços, com análises explicáveis.</p><a href="https://github.com/matheusmoura198/game-market-intelligence" target="_blank" rel="noopener">Ver repositório ↗</a></article>
-      <article class="card"><div class="card-top"><span class="tag">JavaScript</span><span>03</span></div><h3>Quiz de Basquete</h3><p>Repositório de um projeto de quiz relacionado ao basquete, criado para praticar lógica e desenvolvimento com JavaScript.</p><a href="https://github.com/matheusmoura198/quiz-basquete" target="_blank" rel="noopener">Ver repositório ↗</a></article>
-      <article class="card"><div class="card-top"><span class="tag">Estudos</span><span>04</span></div><h3>Exercícios de Informática</h3><p>Repositório com atividades e exercícios realizados durante os estudos do curso Técnico em Informática.</p><a href="https://github.com/matheusmoura198/exercicios-1inf" target="_blank" rel="noopener">Ver repositório ↗</a></article>
-    </div>
-  </div></section>
-
-  <section id="interesses"><div class="wrap">
-    <div class="section-kicker">Além do código</div><h2>Coisas de que gosto</h2>
-    <div class="interests">
-      <div class="interest"><div class="symbol">⚡</div><h3>Pokémon</h3><p>Gosto do universo Pokémon, seus personagens e jogos.</p></div>
-      <div class="interest"><div class="symbol">🎮</div><h3>Games</h3><p>Curto videogames e tenho interesse em como são desenvolvidos.</p></div>
-      <div class="interest"><div class="symbol">💻</div><h3>Tecnologia</h3><p>Gosto de aprender programação e explorar novas ferramentas.</p></div>
-    </div>
-  </div></section>
-
-  <section id="objetivos"><div class="wrap">
-    <div class="section-kicker">O que vem pela frente</div><h2>Meus objetivos</h2>
-    <div class="goal"><h3>Quero me tornar um desenvolvedor de games e softwares.</h3><p>Pretendo concluir o Ensino Médio e o Técnico em Informática, cursar Engenharia de Software e continuar minha trajetória na área de Tecnologia da Informação. Quero começar construindo projetos, aprender com cada experiência e crescer como desenvolvedor.</p></div>
-  </div></section>
-  <section class="contact" id="contato"><div class="wrap"><div class="section-kicker">Vamos conversar</div><h2>Entre em contato comigo</h2><p>Você pode me encontrar pelas redes sociais.</p><div class="contact-actions"><a class="contact-btn contact-instagram" href="https://www.instagram.com/oth3uxz_/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a><a class="contact-btn contact-whatsapp" href="https://wa.me/5585991613182" target="_blank" rel="noopener noreferrer">WHATSAPP</a></div></div></section>
-</main>
-<footer><div class="wrap">Desenvolvido por <strong>Matheus Moura</strong> · <a href="https://github.com/matheusmoura198" target="_blank" rel="noopener">GitHub</a> · General Sampaio – CE</div></footer>
-</body></html>
+    </header>
+    <main>
+      <div class="wrap hero" id="inicio">
+        <div>
+          <div class="eyebrow">
+            Estudante de informática · Desenvolvedor em formação
+          </div>
+          <h1>
+            Olá, eu sou
+            <br>
+            <span>Matheus Moura.</span>
+          </h1>
+          <p class="intro">
+            Sou estudante do curso Técnico em Informática na Escola Estadual de Ensino Profissional Deputado Roberto Mesquita e moro em General Sampaio, Ceará. Gosto de tecnologia, games e de aprender como ideias podem virar projetos digitais.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#projetos">Conheça meus projetos</a><a class="btn ghost" href="https://github.com/matheusmoura198" target="_blank" rel="noopener">Meu GitHub</a>
+          </div>
+        </div>
+        <div class="photo-area">
+          <div class="photo-frame">
+            <div class="photo-placeholder" id="photoPlaceholder">
+              <div>
+                <strong>MM</strong><small>Adicione sua foto em
+                <br>
+                <code>assets/foto-perfil.png</code></small>
+              </div>
+            </div>
+            <img id="profilePhoto" src="IMG_20261115_003356.png" alt="Foto de Matheus Moura" hidden onload="this.hidden=false;document.getElementById('photoPlaceholder').hidden=true" onerror="this.hidden=true">
+          </div>
+        </div>
+      </div>
+      <section id="sobre">
+        <div class="wrap">
+          <div class="section-kicker">
+            Um pouco sobre mim
+          </div>
+          <h2>
+            Aprendendo, criando e evoluindo.
+          </h2>
+          <p class="about">
+            Atualmente estou desenvolvendo meus conhecimentos em HTML, CSS e JavaScript, enquanto estudo e aprendo sobre APIs e bancos de dados. Tenho interesse em desenvolvimento web e quero ampliar minhas habilidades criando experiências, ferramentas e soluções próprias. Cada projeto é uma oportunidade de praticar e dar mais um passo na minha formação.
+          </p>
+        </div>
+      </section>
+      <section id="projetos">
+        <div class="wrap">
+          <div class="section-kicker">
+            Meu trabalho
+          </div>
+          <h2>
+            Projetos e experiências
+          </h2>
+          <div class="grid">
+            <article class="card">
+              <div class="card-top">
+                <span class="tag">Desenvolvimento web</span><span>01</span>
+              </div>
+              <h3>
+                PlatinumGames
+              </h3>
+              <p>
+                Site sobre jogos, com páginas de informações e guias de conquistas. Projeto desenvolvido com HTML, CSS e JavaScript, incluindo pesquisa e layout responsivo.
+              </p>
+              <a href="https://github.com/matheusmoura198/platinumGames" target="_blank" rel="noopener">Ver repositório ↗</a>
+            </article>
+            <article class="card">
+              <div class="card-top">
+                <span class="tag">Projeto em desenvolvimento</span><span>02</span>
+              </div>
+              <h3>
+                Game Market Intelligence
+              </h3>
+              <p>
+                Projeto independente de inteligência de mercado para jogos, planejado para reunir catálogo, comparação e histórico de preços, com análises explicáveis.
+              </p>
+              <a href="https://github.com/matheusmoura198/game-market-intelligence" target="_blank" rel="noopener">Ver repositório ↗</a>
+            </article>
+            <article class="card">
+              <div class="card-top">
+                <span class="tag">JavaScript</span><span>03</span>
+              </div>
+              <h3>
+                Quiz de Basquete
+              </h3>
+              <p>
+                Repositório de um projeto de quiz relacionado ao basquete, criado para praticar lógica e desenvolvimento com JavaScript.
+              </p>
+              <a href="https://github.com/matheusmoura198/quiz-basquete" target="_blank" rel="noopener">Ver repositório ↗</a>
+            </article>
+            <article class="card">
+              <div class="card-top">
+                <span class="tag">Estudos</span><span>04</span>
+              </div>
+              <h3>
+                Exercícios de Informática
+              </h3>
+              <p>
+                Repositório com atividades e exercícios realizados durante os estudos do curso Técnico em Informática.
+              </p>
+              <a href="https://github.com/matheusmoura198/exercicios-1inf" target="_blank" rel="noopener">Ver repositório ↗</a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="interesses">
+        <div class="wrap">
+          <div class="section-kicker">
+            Além do código
+          </div>
+          <h2>
+            Coisas de que gosto
+          </h2>
+          <div class="interests">
+            <div class="interest">
+              <div class="symbol">
+                ⚡
+              </div>
+              <h3>
+                Pokémon
+              </h3>
+              <p>
+                Gosto do universo Pokémon, seus personagens e jogos.
+              </p>
+            </div>
+            <div class="interest">
+              <div class="symbol">
+                🎮
+              </div>
+              <h3>
+                Games
+              </h3>
+              <p>
+                Curto videogames e tenho interesse em como são desenvolvidos.
+              </p>
+            </div>
+            <div class="interest">
+              <div class="symbol">
+                💻
+              </div>
+              <h3>
+                Tecnologia
+              </h3>
+              <p>
+                Gosto de aprender programação e explorar novas ferramentas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="objetivos">
+        <div class="wrap">
+          <div class="section-kicker">
+            O que vem pela frente
+          </div>
+          <h2>
+            Meus objetivos
+          </h2>
+          <div class="goal">
+            <h3>
+              Quero me tornar um desenvolvedor de games e softwares.
+            </h3>
+            <p>
+              Pretendo concluir o Ensino Médio e o Técnico em Informática, cursar Engenharia de Software e continuar minha trajetória na área de Tecnologia da Informação. Quero começar construindo projetos, aprender com cada experiência e crescer como desenvolvedor.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contato">
+        <div class="wrap">
+          <div class="section-kicker">
+            Vamos conversar
+          </div>
+          <h2>
+            Entre em contato comigo
+          </h2>
+          <p>
+            Você pode me encontrar pelas redes sociais.
+          </p>
+          <div class="contact-actions">
+            <a class="contact-btn contact-instagram" href="https://www.instagram.com/oth3uxz_/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a><a class="contact-btn contact-whatsapp" href="https://wa.me/5585991613182" target="_blank" rel="noopener noreferrer">WHATSAPP</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        Desenvolvido por <strong>Matheus Moura</strong> · <a href="https://github.com/matheusmoura198" target="_blank" rel="noopener">GitHub</a> · General Sampaio – CE
+      </div>
+    </footer>
+  </body>
+</html>
