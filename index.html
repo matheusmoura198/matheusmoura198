@@ -69,107 +69,25 @@
       .navlinks a:hover {
         color:var(--red2)
       }
-      .hero {
-        padding:76px 0 66px;
-        display:grid;
-        grid-template-columns:1.3fr .7fr;
-        align-items:center;
-        gap:48px;
-        min-height:520px
-      }
-      .eyebrow {
-        color:var(--red2);
-        font-size:.82rem;
-        font-weight:800;
-        letter-spacing:2px;
-        text-transform:uppercase
-      }
-      h1 {
-        font-size:clamp(2.7rem,7vw,5.2rem);
-        line-height:1.04;
-        letter-spacing:-3px;
-        margin:14px 0 20px
-      }
-      h1 span {
-        color:var(--red2)
-      }
-      .intro {
-        font-size:1.08rem;
-        color:#c8c8c8;
-        max-width:650px
-      }
-      .actions {
-        display:flex;
-        gap:12px;
-        flex-wrap:wrap;
-        margin-top:28px
-      }
-      .btn {
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
-        padding:11px 18px;
-        border-radius:8px;
-        font-weight:750;
-        border:1px solid var(--red);
-        background:var(--red);
-        color:white;
-        transition:.2s
-      }
-      .btn:hover {
-        transform:translateY(-2px);
-        background:var(--red2)
-      }
-      .btn.ghost {
-        background:transparent;
-        border-color:#594047
-      }
-      .btn.ghost:hover {
-        border-color:var(--red2)
-      }
-      .photo-area {
-        display:flex;
-        justify-content:center
-      }
-      .photo-frame {
-        width:min(290px,75vw);
-        aspect-ratio:1;
-        border:2px solid var(--red);
-        border-radius:24px;
-        padding:9px;
-        background:linear-gradient(145deg,#301016,#111);
-        box-shadow:18px 18px 0 #40121a
-      }
-      .photo-frame img {
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        border-radius:16px;
-        background:#202020
-      }
-      /* Garante que o atributo hidden prevaleça sobre display:grid/flex. */
-      .photo-placeholder[hidden],
-      .photo-frame img[hidden] {
-        display:none !important;
-      }
-      .photo-placeholder {
-        height:100%;
-        display:grid;
-        place-items:center;
-        text-align:center;
-        border:1px dashed #75404a;
-        border-radius:16px;
-        color:#bbb;
-        padding:20px
-      }
-      .photo-placeholder strong {
-        display:block;
-        color:white;
-        font-size:3.5rem
-      }
-      .photo-placeholder small {
-        display:block
-      }
+      .hero { min-height:auto; padding:76px 0 66px; display:flex; flex-direction:column; align-items:center; gap:26px; text-align:center }
+      .photo-area { width:100%; display:flex; justify-content:center; perspective:1200px }
+      .photo-flip { width:min(560px,92vw); height:380px; outline:none }
+      .photo-flip-inner { position:relative; width:100%; height:100%; transform-style:preserve-3d; transition:transform .8s cubic-bezier(.2,.7,.2,1) }
+      .photo-flip:hover .photo-flip-inner, .photo-flip:focus .photo-flip-inner, .photo-flip:focus-within .photo-flip-inner { transform:rotateY(180deg) }
+      .photo-face { position:absolute; inset:0; overflow:hidden; border:2px solid var(--red); border-radius:24px; backface-visibility:hidden; -webkit-backface-visibility:hidden; box-shadow:18px 18px 0 #40121a }
+      .photo-front { background:linear-gradient(145deg,#301016,#111) }
+      .photo-front img { display:block; width:100%; height:100%; object-fit:cover; border-radius:21px }
+      .photo-back { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:clamp(22px,5vw,42px); background:linear-gradient(145deg,#301016,#141414 75%); transform:rotateY(180deg); text-align:center }
+      .photo-back .eyebrow { margin:0 0 12px }
+      .photo-back h1 { margin:0 0 16px; font-size:clamp(2rem,5vw,3.4rem); line-height:1.08; letter-spacing:-1.5px }
+      .photo-back h1 span { color:var(--red2) }
+      .photo-back .intro { max-width:470px; margin:0; font-size:1rem; color:#c8c8c8 }
+      .actions { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:0 }
+      .btn { display:inline-flex; align-items:center; justify-content:center; padding:11px 18px; border-radius:8px; font-weight:750; border:1px solid var(--red); background:var(--red); color:white; transition:background .2s,border-color .2s,transform .2s }
+      .btn:hover { transform:translateY(-2px); background:var(--red2) }
+      .btn.ghost { background:transparent; border-color:#594047 }
+      .btn.ghost:hover { border-color:var(--red2) }
+      .photo-flip:focus-visible { outline:3px solid var(--red2); outline-offset:7px; border-radius:26px }
       section {
         padding:68px 0;
         border-top:1px solid #211a1c
@@ -315,17 +233,10 @@
         background:#168b48
       }
       @media(max-width:760px) {
-        .hero {
-          grid-template-columns:1fr;
-          padding:55px 0;
-          gap:35px
-        }
-        .photo-area {
-          grid-row:1
-        }
-        .photo-frame {
-          width:210px
-        }
+        .hero { padding:55px 0; gap:24px }
+        .photo-flip { height:420px }
+        .photo-back { padding:24px 20px }
+        .photo-back .intro { font-size:.92rem }
         .grid {
           grid-template-columns:1fr
         }
@@ -345,6 +256,7 @@
           letter-spacing:-1.5px
         }
       }
+      @media(prefers-reduced-motion:reduce) { .photo-flip-inner { transition:none } html { scroll-behavior:auto } }
     </style>
   </head>
   <body>
@@ -360,33 +272,23 @@
     </header>
     <main>
       <div class="wrap hero" id="inicio">
-        <div>
-          <div class="eyebrow">
-            Estudante de informática · Desenvolvedor em formação
-          </div>
-          <h1>
-            Olá, eu sou
-            <br>
-            <span>Matheus Moura.</span>
-          </h1>
-          <p class="intro">
-            Sou estudante do curso Técnico em Informática na Escola Estadual de Ensino Profissional Deputado Roberto Mesquita e moro em General Sampaio, Ceará. Gosto de tecnologia, games e de aprender como ideias podem virar projetos digitais.
-          </p>
-          <div class="actions">
-            <a class="btn" href="#projetos">Conheça meus projetos</a><a class="btn ghost" href="https://github.com/matheusmoura198" target="_blank" rel="noopener">Meu GitHub</a>
-          </div>
-        </div>
         <div class="photo-area">
-          <div class="photo-frame">
-            <div class="photo-placeholder" id="photoPlaceholder">
-              <div>
-                <strong>MM</strong><small>Adicione sua foto em
-                <br>
-                <code>assets/foto-perfil.png</code></small>
+          <div class="photo-flip" tabindex="0" role="button" aria-label="Passe o cursor ou use o teclado para conhecer mais sobre Matheus Moura">
+            <div class="photo-flip-inner">
+              <div class="photo-face photo-front">
+                <img src="IMG_20261115_003356.png" alt="Foto de Matheus Moura">
+              </div>
+              <div class="photo-face photo-back">
+                <p class="eyebrow">Estudante de informática · Desenvolvedor em formação</p>
+                <h1>Olá, eu sou<br><span>Matheus Moura.</span></h1>
+                <p class="intro">Sou estudante do curso Técnico em Informática na Escola Estadual de Ensino Profissional Deputado Roberto Mesquita e moro em General Sampaio, Ceará. Gosto de tecnologia, games e de aprender como ideias podem virar projetos digitais.</p>
               </div>
             </div>
-            <img id="profilePhoto" src="IMG_20261115_003356.png" alt="Foto de Matheus Moura" hidden onload="this.hidden=false;document.getElementById('photoPlaceholder').hidden=true" onerror="this.hidden=true">
           </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#projetos">Conheça meus projetos</a>
+          <a class="btn ghost" href="https://github.com/matheusmoura198" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
         </div>
       </div>
       <section id="sobre">
