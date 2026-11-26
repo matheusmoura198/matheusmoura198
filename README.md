@@ -1,6 +1,6 @@
 # Olá! Eu sou Matheus Moura 👋
 
-🚀 **[ACESSE MEU PORTFÓLIO](https://matheus-moura-portfolio.vercel.app)** — projetos, apresentação e objetivos profissionais.
+🚀 **[ACESSE MEU PORTFÓLIO](https://matheusmoura198.github.io/matheusmoura198/)** — projetos, apresentação e objetivos profissionais.
 
 🎓 **Estudante de Técnico em Informática**
 
