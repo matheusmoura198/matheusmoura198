@@ -19,7 +19,13 @@ Estudo Técnico em Informática e estou construindo minha base em desenvolviment
 
 ## Tecnologias
 
-Atualmente estudo e pratico HTML, CSS, JavaScript, APIs e fundamentos de bancos de dados.
+| Tecnologia | Experiência |
+| --- | --- |
+| **HTML** | Projetos práticos |
+| **CSS** | Projetos práticos |
+| **JavaScript** | Projetos práticos |
+| **APIs** | Em aprendizado |
+| **Banco de dados** | Em aprendizado |
 
 ## Objetivos
 
