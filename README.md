@@ -1,39 +1,31 @@
 # Olá! Eu sou Matheus Moura 👋
 
-🚀 **[ACESSE MEU PORTFÓLIO](https://matheusmoura198.github.io/matheusmoura198/)** — projetos, apresentação e objetivos profissionais.
+🎓 Estudante de Técnico em Informática e desenvolvedor em formação.
 
-🎓 **Estudante de Técnico em Informática**
+**[Acesse meu portfólio](https://matheusmoura198.github.io/matheusmoura198/)** — projetos, apresentação e objetivos.
 
 ## Sobre mim
 
-Sou estudante de Técnico em Informática na **Escola Estadual de Ensino Profissional Deputado Roberto Mesquita** e resido no município de **General Sampaio – CE, Brasil**.
+Estudo Técnico em Informática e estou construindo minha base em desenvolvimento de software por meio de estudos e projetos práticos. Tenho interesse em desenvolvimento web, games e em transformar ideias em soluções digitais.
 
-Tenho interesse em tecnologia e desenvolvimento de software. Estou construindo minha base na programação, praticando e desenvolvendo projetos para ampliar meus conhecimentos.
+## Projetos em destaque
 
-## Tecnologias e conhecimentos
+| Projeto | Descrição | Repositório |
+| --- | --- | --- |
+| **PlatinumGames** | Biblioteca de jogos e guias de conquistas, com pesquisa, filtros e acompanhamento de progresso. | [Acessar](https://github.com/matheusmoura198/platinumGames) |
+| **Game Market Intelligence** | Projeto independente em desenvolvimento para organizar informações de mercado e histórico de preços de jogos. | [Acessar](https://github.com/matheusmoura198/game-market-intelligence) |
+| **Awarded Games** | Site editorial interativo sobre jogos que poderiam ter recebido o prêmio de Jogo do Ano. | [Acessar](https://github.com/matheusmoura198/awarded-games) |
+| **Quiz de Basquete** | Quiz temático, desenvolvido como exercício de programação. | [Acessar](https://github.com/matheusmoura198/quiz-basquete) |
 
-Atualmente, estudo e pratico:
+## Tecnologias
 
-| JavaScript | HTML | CSS | APIs e Banco de Dados |
-|:---:|:---:|:---:|:---:|
-|<img src="JavaScript-Symbol.png" alt="JavaScript" width="88"> |<img src="html-sem-fundo.png" alt="HTML" width="88"> |<img src="csssymbol.png" alt="CSS" width="88"> |<img src="bancodedados-symbol.webp" alt="APIs e Banco de Dados" width="88"> |
-| Em aprendizado | Em aprendizado | Em aprendizado | Estudando e aprendendo |
+Atualmente estudo e pratico HTML, CSS, JavaScript, APIs e fundamentos de bancos de dados.
 
 ## Objetivos
 
-Meu objetivo é concluir o Ensino Médio e o curso Técnico em Informática, ingressar em uma faculdade de **Engenharia de Software** e continuar minha trajetória profissional na área de Tecnologia da Informação (TI).
-
-Quero seguir aprendendo, desenvolver projetos cada vez melhores e transformar conhecimento em soluções úteis.
-
----
-
-📍 General Sampaio – Ceará, Brasil  
-📚 Técnico em Informática  
-🎮 Interessado em Pokémon, games e desenvolvimento  
-🚀 Em constante aprendizado
-
+Concluir o Ensino Médio e o Técnico em Informática, ingressar em Engenharia de Software e continuar aprendendo por meio de projetos, experimentação e estudo.
 
 ## Contato
 
-[![INSTAGRAM](https://img.shields.io/badge/INSTAGRAM-E32636?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/oth3uxz_/)
-[![WHATSAPP](https://img.shields.io/badge/WHATSAPP-168B48?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5585991613182)
+[![Instagram](https://img.shields.io/badge/Instagram-E32636?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/oth3uxz_/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-168B48?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5585991613182)
